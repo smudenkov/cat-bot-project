@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Котики</title>
+  <style>
+    /* Это CSS */
+    body {
+      background: #f0f0f0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 40px;
+    }
+    .cat {
+      width: 150px;
+      margin: 20px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .cat:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Мои три котика</h1>
+  <img src="cat1.jpg" class="cat" />
+  <img src="cat2.jpg" class="cat" />
+  <img src="cat3.jpg" class="cat" />
+
+  <script>
+    // Это JavaScript
+    document.querySelectorAll('.cat').forEach((cat, i) => {
+      cat.addEventListener('click', () => {
+        alert(Котик номер ${i + 1} говорит "Мяу!");
+      });
+    });
+  </script>
+</body>
+</html>
